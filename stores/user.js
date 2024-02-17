@@ -93,6 +93,20 @@ export const useUserStore = defineStore('user', {
       this.getUserTheme()
     },
 
+    async getUserDetails(userName) {
+      let res = await $axios.get(`/api/user/${userName}`)
+      
+      this.$state.id = res.data.id
+      this.$state.theme_id = res.data.theme_id
+      this.$state.name = res.data.name
+      this.$state.bio = res.data.bio
+      this.$state.image = res.data.image
+      this.$state.allLinks = res.data.links
+
+      this.getUserTheme()
+    },
+
+
     async updateUserImage(data) {
       await $axios.post('/api/user-image', data)
     },
