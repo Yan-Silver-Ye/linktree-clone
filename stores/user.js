@@ -94,7 +94,9 @@ export const useUserStore = defineStore('user', {
     },
 
     async getUserDetails(userName) {
-      let res = await $axios.get(`/api/user/${userName}`)
+      console.log(`getUserDetails: ${userName}`)
+      userName = '7788bayarea'
+      let res = await $axios.get(`/api/users/${userName}`)
       
       this.$state.id = res.data.id
       this.$state.theme_id = res.data.theme_id

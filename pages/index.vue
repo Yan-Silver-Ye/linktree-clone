@@ -52,6 +52,16 @@
                     Sign up
                 </NuxtLink>
             </div>
+
+            <div class="text-[14px] text-center pt-12">
+                test link
+                <NuxtLink 
+                    to="/link/7788bayarea"
+                    class="text-[#8228D9] underline"
+                >
+                    Link
+                </NuxtLink>
+            </div>
         </div>
     </AuthLayout>
 </template>
@@ -63,6 +73,8 @@ import { useUserStore } from '~~/stores/user';
 const userStore = useUserStore()
 
 const router = useRouter()
+
+console.log('Login')
 
 definePageMeta({ middleware: 'is-logged-in' })
 

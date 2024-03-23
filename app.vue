@@ -12,10 +12,14 @@
 <script setup>
 import { useUserStore } from '~~/stores/user';
 import { storeToRefs } from 'pinia';
+
 const userStore = useUserStore()
 const { isMobile, isPreviewOverlay, updatedLinkId, addLinkOverlay, id } = storeToRefs(userStore)
 
 const route = useRoute()
+const router = useRouter()
+console.log('Routes: ', router.getRoutes())
+
 let show = ref(false)
 let bgIsGray = ref(false)
 
