@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                    <div v-for="link in userStore.links">
+                    <div v-for="link in userStore.allLinks">
                         <a
                             :href="link.url" 
                             target="_blank"
@@ -64,6 +64,7 @@ import { useUserStore } from '~~/stores/user'
 const route = useRoute()
 const router = useRouter()
 console.log('LinkPage: ', route.params.id)
+
 if (!route.params.id) {
     navigateTo('/')
 }
@@ -72,9 +73,11 @@ const userStore = useUserStore()
 
 try {
     await userStore.getUserDetails(route.params.id)
+    console.log('getUserDetails: ', userStore)
 } catch (error) {
     console.log(error)
 }
+
 watch(() => route.params.id, async () => await userStore.getUserDetails(route.params.id))
 
 </script>

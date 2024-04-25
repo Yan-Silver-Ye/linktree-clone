@@ -119,7 +119,7 @@
         <slot />
     </div>
 
-    <div
+    <!-- <div
         v-if="userStore.isMobile"
         id="BottomNav" 
         class="fixed z-20 bottom-0 flex w-full bg-white shadow-[0_35px_60px_10px_rgba(0,0,0,0.4)]"
@@ -167,7 +167,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script setup>
@@ -199,34 +199,34 @@ const links = ref([
 ])
 
 const linksSecondaryNav = ref([
-    { name: 'Links', url: '/admin', icon: 'icon-park-outline:hamburger-button' },
-    { name: 'Apperance', url: '/admin/apperance', icon: 'fluent:shapes-48-regular' },
-    { name: 'Analytics', url: '/', icon: 'tabler:brand-google-analytics' },
-    { name: 'More', url: '/admin/more', icon: '', img: userStore.image }
+    // { name: 'Links', url: '/admin', icon: 'icon-park-outline:hamburger-button' },
+    // { name: 'Apperance', url: '/admin/apperance', icon: 'fluent:shapes-48-regular' },
+    // { name: 'Analytics', url: '/', icon: 'tabler:brand-google-analytics' },
+    // { name: 'More', url: '/admin/more', icon: '', img: userStore.image }
 ])
 
 const linksMobile = ref([
-    { name: 'Links', url: '/admin', icon: 'icon-park-outline:hamburger-button', img: '' },
-    { name: 'Apperance', url: '/admin/apperance', icon: 'fluent:shapes-48-regular', img: '' },
-    { name: 'Preview', url: '/admin/preview', icon: 'icon-park-outline:preview-open', img: '' },
-    { name: 'Analytics', url: '/', icon: 'tabler:brand-google-analytics', img: '' },
-    { name: 'More', url: '/admin/more', icon: '', img: userStore.image }
+    // { name: 'Links', url: '/admin', icon: 'icon-park-outline:hamburger-button', img: '' },
+    // { name: 'Apperance', url: '/admin/apperance', icon: 'fluent:shapes-48-regular', img: '' },
+    // { name: 'Preview', url: '/admin/preview', icon: 'icon-park-outline:preview-open', img: '' },
+    // { name: 'Analytics', url: '/', icon: 'tabler:brand-google-analytics', img: '' },
+    // { name: 'More', url: '/admin/more', icon: '', img: userStore.image }
 ])
 
 const currentMobilePage = () => {
     switch(route.fullPath) {
-        case '/admin':
-            return 'Links'
-            break;
-        case '/admin/apperance':
-            return 'Apperance'
-            break;
-        case '/admin/preview':
-            return 'Preview'
-            break;
-        case '/admin/more':
-            return 'More'
-            break;
+        // case '/admin':
+        //     return 'Links'
+        //     break;
+        // case '/admin/apperance':
+        //     return 'Apperance'
+        //     break;
+        // case '/admin/preview':
+        //     return 'Preview'
+        //     break;
+        // case '/admin/more':
+        //     return 'More'
+        //     break;
     }
 }
 
